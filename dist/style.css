@@ -210,7 +210,7 @@ h3 {
   line-height: 1;
 }
 .hero-section {
-  background-image: url(/images/bg-curve-mobile.svg);
+  background-image: url(../../../images/bg-curve-mobile.svg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -218,7 +218,7 @@ h3 {
 }
 @media (min-width: 71.875em) {
   .hero-section {
-    background-image: url(/images/bg-curve-desktop.svg);
+    background-image: url(../../../images/bg-curve-desktop.svg);
     padding-bottom: 16rem;
   }
 }

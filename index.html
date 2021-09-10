@@ -31,7 +31,7 @@
         <a href="index.html" aria-label="Fylo home">
           <img class="header__logo" src="./images/logo.svg" alt="Fylo" />
         </a>
-        <nav>
+        <nav aria-label="header navigation">
           <ul class="nav flex">
             <li class="nav__item">
               <a href="" class="nav__link">Features</a>
@@ -64,20 +64,20 @@
             <!--Email input Form-->
             <form class="form" action="#">
               <div class="email">
-                <label for="email" class="sr-only">Enter email</label>
+                <label for="email-primary" class="sr-only">Enter email</label>
                 <input
                   type="email"
                   name="email"
                   class="email__input"
-                  id="email"
+                  id="email-primary"
                   required
                   placeholder="Enter your email..."
-                  aria-describedby="error__message"
+                  aria-describedby="error__message-primary"
                 />
 
                 <div
                   class="email__validation"
-                  id="error__message"
+                  id="error__message-primary"
                   aria-live="assertive"
                 >
                   Please check your email address
@@ -115,7 +115,7 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
               >
                 <defs>
-                  <circle id="b" cx="6" cy="6" r="6" />
+                  <circle id="p-b" cx="6" cy="6" r="6" />
                   <filter
                     x="-25%"
                     y="-25%"
@@ -149,25 +149,23 @@
               </svg>
             </a>
             <figure class="testimonial">
-              <div class="testimonial__container">
-                <img src="./images/icon-quotes.svg" alt="" aria-hidden="true" />
-                <blockquote>
-                  Fylo has improved our team productivity by an order of
-                  magnitude. Since making the switch our team has become a
-                  well-oiled collaboration machine.
-                </blockquote>
-                <figcaption class="profile flex">
-                  <img
-                    class="profile__img"
-                    src="./images/avatar-testimonial.jpg"
-                    alt="Kyle Burton"
-                  />
-                  <div>
-                    <h3 class="profile__title">Kyle Burton</h3>
-                    <p class="profile__disc">Founder & CEO, Fylo</p>
-                  </div>
-                </figcaption>
-              </div>
+              <img src="./images/icon-quotes.svg" alt="" aria-hidden="true" />
+              <blockquote>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </blockquote>
+              <figcaption class="profile flex">
+                <img
+                  class="profile__img"
+                  src="./images/avatar-testimonial.jpg"
+                  alt="Kyle Burton"
+                />
+                <div>
+                  <h3 class="profile__title">Kyle Burton</h3>
+                  <p class="profile__disc">Founder & CEO, Fylo</p>
+                </div>
+              </figcaption>
             </figure>
           </div>
           <div class="productive__img">
@@ -188,20 +186,20 @@
           </div>
           <form class="form getAccess__form" action="#">
             <div class="email getAccess__email">
-              <label for="email" class="sr-only">Enter email</label>
+              <label for="email-secondary" class="sr-only">Enter email</label>
               <input
                 type="email"
                 name="email"
                 class="email__input email__input--secondary"
-                id="email"
+                id="email-secondary"
                 required
                 placeholder="email@example.com"
-                aria-describedby="error__message"
+                aria-describedby="error__message-secondary"
               />
 
               <div
                 class="email__validation email__validation--white"
-                id="error__message"
+                id="error__message-secondary"
                 aria-live="assertive"
               >
                 Please check your email address
@@ -226,7 +224,7 @@
             xmlns:xlink="http://www.w3.org/1999/xlink"
           >
             <defs>
-              <path id="a" d="M.014.03h93.96v48.29H.015z" />
+              <path id="f-logo" d="M.014.03h93.96v48.29H.015z" />
             </defs>
             <g fill="none" fill-rule="evenodd">
               <path
@@ -262,7 +260,7 @@
               </a>
             </li>
           </ul>
-          <nav class="footer__nav">
+          <nav class="footer__nav" aria-label="footer navigation">
             <ul class="footer__list">
               <li class="footer__item">
                 <a href="#" class="footer__link">About Us</a>

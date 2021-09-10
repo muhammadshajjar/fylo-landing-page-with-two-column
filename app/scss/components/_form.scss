@@ -1,0 +1,89 @@
+@use '../abstracts/' as *;
+
+/*--------------
+Forms of both hero and getAccess section
+----------------*/
+
+.form {
+  width: 100%;
+  font-size: rem(14);
+
+  @include breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: minmax(50%, 20rem) minmax(25%, 12.65rem);
+    gap: rem(16);
+  }
+}
+
+.email {
+  &__input {
+    height: rem(56);
+    width: 100%;
+    padding-left: rem(19);
+    border: 1px solid $Very-Dark-Blue;
+    border-radius: 5px;
+
+    @include breakpoint-up(large) {
+      height: rem(45);
+      &--secondary {
+        height: rem(49);
+        border-color: transparent;
+        box-shadow: 3px 3px 9px rgb(0 0 0 / 20%);
+      }
+    }
+  }
+  &__validation {
+    visibility: hidden;
+    text-align: left;
+    font-size: rem(12);
+    color: $red;
+    &--white {
+      color: hsl(0, 0%, 100%);
+    }
+  }
+
+  &__input:focus:invalid ~ .email__validation {
+    visibility: visible;
+  }
+  &__input:focus:invalid {
+    border-color: red;
+  }
+}
+
+.form__btn {
+  height: rem(56);
+  background-color: $Bright-Blue;
+  color: hsl(0, 0%, 100%);
+  font-family: $ff-raleway;
+  font-weight: $ff-bold;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 3px 3px 9px rgb(0 0 0 / 20%);
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
+  }
+  @include breakpoint-up(large) {
+    height: rem(45);
+    &--secondary {
+      height: rem(49);
+      width: 42%;
+    }
+  }
+}
+
+.getAccess__form {
+  @include breakpoint-up(medium) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: rem(16);
+    @include breakpoint-up(large) {
+      margin-top: rem(16);
+      margin-right: rem(48);
+      display: flex;
+      flex-direction: column;
+      max-width: rem(490);
+    }
+  }
+}

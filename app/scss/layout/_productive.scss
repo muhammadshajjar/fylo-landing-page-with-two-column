@@ -1,0 +1,120 @@
+@use '../abstracts/' as *;
+
+.productive-section {
+  background-color: $Light-Grayish-Blue;
+}
+.productive {
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: rem(60) 0;
+
+  @include breakpoint-up(large) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__content {
+    @include breakpoint-up(large) {
+      width: 52%;
+      margin-right: rem(20);
+    }
+  }
+
+  &__img {
+    @include breakpoint-up(medium) {
+      max-width: 550px;
+    }
+    @include breakpoint-up(large) {
+      align-self: flex-start;
+      padding-top: rem(10);
+    }
+  }
+  &__title {
+    margin-top: rem(90);
+    text-align: center;
+    @include breakpoint-up(medium) {
+      font-size: rem(35);
+      margin-bottom: rem(35);
+    }
+    @include breakpoint-up(large) {
+      font-size: rem(38);
+      text-align: left;
+      margin-top: 0;
+    }
+  }
+  &__disc {
+    @include breakpoint-up(large) {
+      font-size: rem(17);
+      max-width: rem(570);
+    }
+  }
+
+  &__link {
+    align-items: center;
+    font-size: rem(15);
+    color: $Moderate-Cyan;
+    border-bottom: 2px solid $Moderate-Cyan;
+    padding-bottom: rem(5);
+    width: fit-content;
+    margin: 0 auto;
+    &:hover {
+      opacity: 0.75;
+    }
+    @include breakpoint-up(large) {
+      margin: 0;
+      font-size: rem(17);
+    }
+    svg {
+      margin-left: rem(5);
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
+
+.testimonial {
+  margin: rem(42) rem(10);
+  @include breakpoint-up(large) {
+    margin-left: 0;
+  }
+
+  &__container {
+    max-width: rem(420);
+    margin: 0 auto;
+    padding: rem(25) rem(32);
+    border-radius: rem(5);
+    line-height: 1.6;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: -2px 2px 13px rgb(0 0 0 / 20%);
+
+    @include breakpoint-up(large) {
+      margin: 0;
+      max-width: rem(358);
+    }
+  }
+  blockquote {
+    padding: rem(16) 0;
+    @include breakpoint-up(large) {
+      font-size: rem(14);
+    }
+  }
+}
+
+//Profile information of user
+
+.profile {
+  align-items: center;
+
+  &__title {
+    font-size: rem(13);
+  }
+  &__disc {
+    font-size: rem(10);
+    margin: 0;
+  }
+  &__img {
+    height: rem(40);
+    border-radius: 50%;
+    margin-right: rem(10);
+  }
+}

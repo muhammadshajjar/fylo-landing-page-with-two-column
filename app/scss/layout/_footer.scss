@@ -1,0 +1,147 @@
+@use '../abstracts/' as *;
+
+.footer-section {
+  background-color: $Very-Dark-Blue;
+  padding-top: rem(93);
+  padding-bottom: rem(44);
+
+  @include breakpoint-up(large) {
+    padding-top: rem(107);
+    padding-bottom: rem(25);
+  }
+}
+
+//Footer content
+.footer {
+  a {
+    color: white;
+    font-size: rem(17);
+  }
+  &__logo {
+    svg {
+      height: rem(52);
+      * {
+        fill: white;
+        height: rem(52);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: rem(56);
+    @include breakpoint-up(medium) {
+      margin-top: rem(22);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__nav {
+    &:not(:first-child) {
+      margin-bottom: rem(76);
+      @include breakpoint-up(medium) {
+        margin-bottom: 0;
+      }
+    }
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      justify-content: space-between;
+    }
+  }
+  &__item {
+    margin-top: rem(76);
+
+    &:not(:first-child) {
+      margin-top: rem(18);
+    }
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+    }
+  }
+  &__link {
+    &:hover,
+    &:focus {
+      color: $hover-col;
+    }
+  }
+}
+//citation information
+.info__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: rem(20);
+  }
+  a {
+    margin-left: rem(16);
+  }
+}
+
+//social icons
+
+.social-icons {
+  &__list {
+    justify-content: center;
+    @include breakpoint-up(large) {
+      margin-right: rem(170);
+    }
+  }
+  &__items {
+    &:not(:first-child) {
+      margin-left: 0.75rem;
+    }
+  }
+  &__link {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid inherit;
+    &::before {
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1;
+    }
+    &:hover,
+    &:focus {
+      color: $hover-col;
+      border-color: $hover-col;
+    }
+  }
+  &--facebook::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+    content: "\f39e";
+  }
+  &--twitter::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f099";
+    font-weight: 400;
+  }
+  &--instagram::before {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f16d";
+    font-weight: 400;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin-top: rem(35);
+  margin-bottom: 0;
+}
+
+.attribution a {
+  font-size: 12px;
+  color: $Bright-Blue;
+}

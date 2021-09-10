@@ -1,0 +1,57 @@
+@use '../abstracts/' as *;
+
+/*------------
+Hero Section
+-------------*/
+.hero-section {
+  background-image: url("/images/bg-curve-mobile.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: rem(150);
+
+  @include breakpoint-up(large) {
+    background-image: url("/images/bg-curve-desktop.svg");
+    padding-bottom: rem(256);
+  }
+}
+.hero {
+  padding: rem(22) 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include breakpoint-up(large) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: left;
+  }
+  &__img {
+    max-width: rem(640);
+  }
+  &__content {
+    max-width: rem(845);
+    @include breakpoint-up(large) {
+      width: 46%;
+      margin-right: rem(20);
+    }
+  }
+  &__title {
+    font-size: rem(30);
+    margin-top: rem(50);
+
+    @include breakpoint-up(medium) {
+      font-size: rem(35);
+      margin-top: rem(60);
+    }
+    @include breakpoint-up(large) {
+      font-size: rem(40);
+      margin-top: 0;
+    }
+  }
+  &__disc {
+    @include breakpoint-up(large) {
+      font-size: rem(18);
+    }
+  }
+}

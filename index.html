@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <!--Font Awesome cdn link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Frontend Mentor | Fylo landing page with two column layout</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header flex container">
+        <a href="index.html" aria-label="Fylo home">
+          <img class="header__logo" src="./images/logo.svg" alt="Fylo" />
+        </a>
+        <nav>
+          <ul class="nav flex">
+            <li class="nav__item">
+              <a href="" class="nav__link">Features</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Team</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Sign In</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero container flex">
+          <div class="hero__img">
+            <img src="./images/illustration-1.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="hero__content">
+            <h1 class="hero__title">
+              All your files in one secure location, accessible anywhere.
+            </h1>
+            <p class="hero__disc">
+              Fylo stores your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends,
+              family, and co-workers.
+            </p>
+            <!--Email input Form-->
+            <form class="form" action="#">
+              <div class="email">
+                <label for="email" class="sr-only">Enter email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="email__input"
+                  id="email"
+                  required
+                  placeholder="Enter your email..."
+                  aria-describedby="error__message"
+                />
+
+                <div
+                  class="email__validation"
+                  id="error__message"
+                  aria-live="assertive"
+                >
+                  Please check your email address
+                </div>
+              </div>
+              <button class="form__btn" type="submit">Get Started</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="productive-section">
+        <div class="productive flex container">
+          <div class="productive__content">
+            <h2 class="productive__title">Stay productive, wherever you are</h2>
+            <div class="productive__disc">
+              <p>
+                Never let location be an issue when accessing your files. Fylo
+                has you covered for all of your file storage needs.
+              </p>
+              <p>
+                Securely share files and folders with friends, family and
+                colleagues for live collaboration. No email attachments
+                required!
+              </p>
+            </div>
+
+            <a href="#" class="productive__link flex">
+              See how Fylo works
+
+              <svg
+                width="16"
+                height="16"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <defs>
+                  <circle id="b" cx="6" cy="6" r="6" />
+                  <filter
+                    x="-25%"
+                    y="-25%"
+                    width="150%"
+                    height="150%"
+                    filterUnits="objectBoundingBox"
+                    id="a"
+                  >
+                    <feOffset in="SourceAlpha" result="shadowOffsetOuter1" />
+                    <feGaussianBlur
+                      stdDeviation="1"
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                    />
+                    <feColorMatrix
+                      values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0"
+                      in="shadowBlurOuter1"
+                    />
+                  </filter>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(2 2)">
+                    <use fill="#000" filter="url(#a)" xlink:href="#b" />
+                    <use fill="#3DA08F" xlink:href="#b" />
+                  </g>
+                  <path
+                    d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z"
+                    fill="#FFF"
+                  />
+                </g>
+              </svg>
+            </a>
+            <figure class="testimonial">
+              <div class="testimonial__container">
+                <img src="./images/icon-quotes.svg" alt="" aria-hidden="true" />
+                <blockquote>
+                  Fylo has improved our team productivity by an order of
+                  magnitude. Since making the switch our team has become a
+                  well-oiled collaboration machine.
+                </blockquote>
+                <figcaption class="profile flex">
+                  <img
+                    class="profile__img"
+                    src="./images/avatar-testimonial.jpg"
+                    alt="Kyle Burton"
+                  />
+                  <div>
+                    <h3 class="profile__title">Kyle Burton</h3>
+                    <p class="profile__disc">Founder & CEO, Fylo</p>
+                  </div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
+          <div class="productive__img">
+            <img src="./images/illustration-2.svg" alt="" aria-hidden="true" />
+          </div>
+        </div>
+      </section>
+
+      <section class="getAccess-section">
+        <div class="getAccess flex container">
+          <div class="getAccess__content">
+            <h2 class="getAccess__title">Get early access today</h2>
+            <p class="getAccess__disc">
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+          <form class="form getAccess__form" action="#">
+            <div class="email getAccess__email">
+              <label for="email" class="sr-only">Enter email</label>
+              <input
+                type="email"
+                name="email"
+                class="email__input email__input--secondary"
+                id="email"
+                required
+                placeholder="email@example.com"
+                aria-describedby="error__message"
+              />
+
+              <div
+                class="email__validation email__validation--white"
+                id="error__message"
+                aria-live="assertive"
+              >
+                Please check your email address
+              </div>
+            </div>
+            <button class="form__btn form__btn--secondary" type="submit">
+              Get Started For Free
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section">
+      <div class="footer container">
+        <div class="footer__logo">
+          <!--logo svg-->
+          <svg
+            width="166"
+            height="49"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <path id="a" d="M.014.03h93.96v48.29H.015z" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <path
+                d="M0 14.13v.123l27.95 13.13L56 14.209v-.033L27.95 1 0 14.13zm10.077.062L27.95 5.795l17.877 8.397-17.877 8.396-17.874-8.396zM27.95 32.483L0 19.55v4.784l27.95 12.964L56 24.289v-4.784L27.95 32.483zm0 9.703L0 29.25v4.783L27.95 47 56 33.99v-4.784l-28.05 12.98z"
+                fill="#BDBAFA"
+              />
+              <g transform="translate(72)">
+                <mask id="b" fill="#fff">
+                  <use xlink:href="#a" />
+                </mask>
+                <path
+                  d="M87.56 24.152a8.1 8.1 0 0 0-2.161-5.573 7.259 7.259 0 0 0-2.34-1.673 6.864 6.864 0 0 0-2.85-.601c-1.01 0-1.961.2-2.852.601a7.257 7.257 0 0 0-2.34 1.673 8.102 8.102 0 0 0-2.16 5.574 8.102 8.102 0 0 0 2.16 5.573 7.257 7.257 0 0 0 2.34 1.672 6.864 6.864 0 0 0 2.851.602c1.01 0 1.96-.2 2.852-.602a7.259 7.259 0 0 0 2.339-1.672 8.1 8.1 0 0 0 2.16-5.574zm6.415 0c0 1.932-.357 3.723-1.07 5.373a13.098 13.098 0 0 1-2.94 4.28c-1.247 1.205-2.71 2.156-4.388 2.854-1.678.699-3.468 1.048-5.369 1.048-1.9 0-3.683-.349-5.346-1.048a13.863 13.863 0 0 1-4.366-2.876 13.351 13.351 0 0 1-2.94-4.302c-.713-1.65-1.07-3.426-1.07-5.329 0-1.873.364-3.634 1.092-5.284a13.92 13.92 0 0 1 2.962-4.325 13.671 13.671 0 0 1 4.367-2.898 13.552 13.552 0 0 1 5.301-1.048c1.901 0 3.69.35 5.369 1.048 1.678.698 3.14 1.65 4.388 2.854 1.248 1.204 2.228 2.638 2.94 4.302.713 1.665 1.07 3.449 1.07 5.351zM64.258 36.905a8.6 8.6 0 0 1-1.715.58c-.638.148-1.3.222-1.982.222a9.84 9.84 0 0 1-2.74-.379 6.003 6.003 0 0 1-2.295-1.226c-.653-.565-1.173-1.3-1.56-2.207-.385-.907-.578-2-.578-3.277V.029h6.549v29.474c0 1.07.215 1.806.646 2.207.43.401.943.602 1.537.602.742 0 1.455-.223 2.138-.669v5.262zM50.492 11.22L38.908 41.854c-.861 2.289-1.99 3.939-3.386 4.95-1.396 1.01-3.06 1.515-4.99 1.515-.297 0-.623-.022-.98-.066a7.352 7.352 0 0 1-1.025-.201l-2.138-5.975a8.486 8.486 0 0 0 1.56.557c.534.134 1.039.201 1.514.201 1.01 0 1.93-.23 2.762-.691.832-.46 1.47-1.315 1.916-2.564l.891-2.586-9.935-25.773h6.995l5.925 16.588 5.57-16.588h6.905zM23.538 7.342H6.786v8.294h16.529v5.618H6.785v15.784H.015V1.412h23.524v5.93z"
+                  fill="#000"
+                  mask="url(#b)"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <div class="footer__content">
+          <ul class="info__list">
+            <li class="info__item">
+              <img src="./images/icon-phone.svg" alt="" aria-hidden="true" />
+              <a class="link info__link" href="tel:+1-543-123-4567">
+                Phone: +1-543-123-4567</a
+              >
+            </li>
+            <li class="info__item">
+              <img src="./images/icon-email.svg" alt="" aria-hidden="true" />
+              <a class="link info__link" href="mailto:example@fylo.com">
+                example@fylo.com
+              </a>
+            </li>
+          </ul>
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">About Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Jobs</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Press</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Blog</a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="social__icons">
+            <ul class="social-icons__list flex">
+              <li class="social-icons__items">
+                <!-- Put fontawsome icons as pseudo element selectors -->
+                <a
+                  class="link social-icons__link social-icons--facebook"
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  aria-labelledby="fb-aria"
+                >
+                  <span id="fb-aria" hidden
+                    >Facebook (opens in new window)
+                  </span>
+                </a>
+              </li>
+              <li class="social-icons__items">
+                <a
+                  class="link social-icons__link icon social-icons--twitter"
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  aria-labelledby="tw-aria"
+                >
+                  <span id="tw-aria" hidden>Twitter (opens in new window)</span>
+                </a>
+              </li>
+              <li class="social-icons__items">
+                <a
+                  class="link social-icons__link social-icons--instagram"
+                  href="#"
+                  rel="noopener"
+                  target="_blank"
+                  aria-labelledby="ins-aria"
+                >
+                  <span id="ins-aria" hidden
+                    >Instagram (opens in new window)</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor </a
+          >. Coded by
+          <a
+            href="https://www.frontendmentor.io/profile/muhammadshajjar/solutions"
+            target="_blank"
+          >
+            Muhammad Shajjar</a
+          >.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

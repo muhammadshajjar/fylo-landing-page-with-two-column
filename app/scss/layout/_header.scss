@@ -1,0 +1,38 @@
+@use '../abstracts/' as *;
+
+/*-------------
+Header section
+-------------_*/
+.header {
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(2rem, 6vw, 4rem) 0;
+  font-family: $ff-raleway;
+
+  &__logo {
+    height: rem(30);
+
+    @include breakpoint-up(medium) {
+      height: rem(40);
+    }
+    @include breakpoint-up(large) {
+      height: rem(50);
+    }
+  }
+}
+
+.nav {
+  &__item + &__item {
+    margin-left: rem(33);
+
+    @include breakpoint-up(large) {
+      margin-left: rem(58);
+    }
+  }
+  &__link {
+    font-weight: var(--fw-regular);
+    font-size: rem(15);
+    line-height: 1;
+    color: $Very-Dark-Blue;
+  }
+}

@@ -4,14 +4,17 @@
 Hero Section
 -------------*/
 .hero-section {
-  background-image: url("/images/bg-curve-mobile.svg");
+  background-image: url("./../../../images/bg-curve-mobile.svg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
   padding-bottom: rem(150);
 
   @include breakpoint-up(large) {
+    /*
     background-image: url("/images/bg-curve-desktop.svg");
+    */
+    background-image: url("./../../../images/bg-curve-desktop.svg");
     padding-bottom: rem(256);
   }
 }

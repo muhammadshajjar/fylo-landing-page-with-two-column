@@ -11,20 +11,15 @@
   }
 }
 
-//Footer content
+//Footer
 .footer {
   a {
     color: white;
     font-size: rem(17);
   }
   &__logo {
-    svg {
-      height: rem(52);
-      * {
-        fill: white;
-        height: rem(52);
-      }
-    }
+    height: rem(52);
+    filter: brightness(0) invert(1);
   }
 
   &__content {

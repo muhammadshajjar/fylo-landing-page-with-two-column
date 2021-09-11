@@ -476,11 +476,9 @@ blockquote {
   color: #fff;
   font-size: 1.0625rem;
 }
-.footer__logo svg {
-  height: 3.25rem;
-}
-.footer__logo svg * {
-  fill: #fff;
+.footer__logo {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
   height: 3.25rem;
 }
 .footer__content {
@@ -593,17 +591,17 @@ blockquote {
 }
 .social-icons--facebook:before {
   content: "\f39e";
-  font-family: Font Awesome\5 Brands;
+  font-family: Font awesome\5 Brands;
   font-weight: 400;
 }
 .social-icons--twitter:before {
   content: "\f099";
-  font-family: Font Awesome\5 Brands;
+  font-family: Font awesome\5 Brands;
   font-weight: 400;
 }
 .social-icons--instagram:before {
   content: "\f16d";
-  font-family: Font Awesome\5 Brands;
+  font-family: Font awesome\5 Brands;
   font-weight: 400;
 }
 .attribution {

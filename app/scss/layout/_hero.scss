@@ -4,7 +4,7 @@
 Hero Section
 -------------*/
 .hero-section {
-  background-image: url("./../../../images/bg-curve-mobile.svg");
+  background-image: url("../images/bg-curve-mobile.svg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
@@ -14,7 +14,8 @@ Hero Section
     /*
     background-image: url("/images/bg-curve-desktop.svg");
     */
-    background-image: url("./../../../images/bg-curve-desktop.svg");
+
+    background-image: url("../images/bg-curve-desktop.svg");
     padding-bottom: rem(256);
   }
 }
